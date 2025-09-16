@@ -20,6 +20,7 @@ namespace Cmf.CustomerPortal.Sdk.Common
             // Add Handlers
             serviceCollection.AddTransient<Handlers.NewEnvironmentHandler>();
             serviceCollection.AddTransient<Handlers.LoginHandler>();
+            serviceCollection.AddTransient<Handlers.LogoutHandler>();
             serviceCollection.AddTransient<Handlers.NewInfrastructureHandler>();
             serviceCollection.AddTransient<Handlers.GetAgentConnectionHandler>();
             serviceCollection.AddTransient<Handlers.AddManifestsHandler>();

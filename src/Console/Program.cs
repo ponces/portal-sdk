@@ -16,6 +16,7 @@ namespace Cmf.CustomerPortal.Sdk.Console
             rootCommand.AddCommand(new DownloadArtifactsCommand());
             rootCommand.AddCommand(new InstallAppCommand());
             rootCommand.AddCommand(new LoginCommand());
+            rootCommand.AddCommand(new LogoutCommand());
             rootCommand.AddCommand(new PublishCommand());
             rootCommand.AddCommand(new PublishPackageCommand());
 

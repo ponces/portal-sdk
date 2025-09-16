@@ -10,6 +10,7 @@ namespace Cmf.CustomerPortal.Sdk.Common
         LogLevel LogLevel { get; }
         void ConfigureSession(string token = null);
         void RestoreSession();
+        void ClearSession();
 
         void LogInformation(string message);
         void LogError(string message);

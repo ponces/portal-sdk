@@ -134,6 +134,31 @@ namespace Cmf.CustomerPortal.Sdk.Common
             ConfigureLBOs(token);
         }
 
+        /// <summary>
+        /// Clears the current session by removing any cached CmfPortal Token.
+        /// This method removes the token from memory and deletes the cached file if it exists.
+        /// </summary>
+        public void ClearSession()
+        {
+            token = null;
+
+            // delete token file if it exists
+            if (File.Exists(_loginCredentialsFilePath))
+            {
+                try
+                {
+                    File.Delete(_loginCredentialsFilePath);
+                    LogDebug("Login Access Token file deleted");
+                }
+                catch (Exception ex)
+                {
+                    LogError(ex);
+                }
+            }
+
+            LogDebug("Session dropped");
+        }
+
         public abstract void LogDebug(string message);
         public abstract void LogError(string message);
         public abstract void LogError(Exception exception);
